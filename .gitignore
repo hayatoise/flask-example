@@ -1,0 +1,7 @@
+venv/
+
+docker/db/
+
+migrations/
+
+.idea/

@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    Flask Example
+</h1>
+<h2 class="subtitle">
+    Description
+</h2>
+<div>
+    {% for user in users %}
+    <a href="{{ url_for('main.profile', name=user.name) | replace('%40', '@')}}">
+        @{{ user.name }}
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
